@@ -1,5 +1,10 @@
 var request = require("superagent");
 
+exports.hello = function(req, res)
+{
+	res.end("I'm online!");
+};
+
 exports.getNode = function( req, res)
 {
 	console.log("Test node ",req.params.id);

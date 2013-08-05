@@ -6,6 +6,8 @@ var server = require('http').createServer(app);
 
 var routes = require("./routes/neo4j.js");
 
+app.get("/", routes.hello );
+
 app.get("/node/:id", routes.getNode );
 
 //CONFIGURATION
