@@ -9,7 +9,7 @@ exports.getNode = function( req, res)
 {
 	console.log("Test node ",req.params.id);
 	
-	request.post( "http://ec2-54-226-209-242.compute-1.amazonaws.com:7474/db/data" + "/cypher")
+	request.post( "http://54.221.197.106:7474/db/data" + "/cypher")
 	.send({
 		query: "START n=node({nodeId}) RETURN n.Name",
 		params: {
