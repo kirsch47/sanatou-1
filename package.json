@@ -1,12 +1,11 @@
 {
-  "name": "sanatou-server",
+  "name": "Sanatou API",
   "version": "0.0.2",
   "scripts": {
     "start": "node app"
   },
   "dependencies": {
     "express": "3.1.0",
-    "connect":"2.7.11",
     "superagent":"0.15.4"
   }
 }

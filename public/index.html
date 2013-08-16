@@ -1,0 +1,170 @@
+<html>
+	<head>
+		<script>
+		function batchSubmit()
+		{
+				
+			  var xhr = new XMLHttpRequest();
+			  
+			  xhr.open("POST", "/upload", true);
+			  xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+
+			  var data = document.getElementById("batch").value;
+
+			 xhr.send( data );
+			 console.log( data );
+
+			  xhr.onloadend = function () {
+				  document.getElementById("output").value = xhr.responseText;
+			  };
+		}
+		
+		function deleteNodes()
+		{
+			 var xhr = new XMLHttpRequest();
+			  
+			 xhr.open("GET", "/deleteNodes", true);
+			 xhr.send();
+
+			 xhr.onloadend = function () {
+				  document.getElementById("output").value = xhr.responseText;
+			 };
+		}
+		
+		function deleteRelations()
+		{
+			 var xhr = new XMLHttpRequest();
+			  
+			 xhr.open("GET", "/deleteRelations", true);
+			 xhr.send();
+
+			 xhr.onloadend = function () {
+				  document.getElementById("output").value = xhr.responseText;
+			 };
+		}
+		</script>
+	</head>
+	<form>
+		<textarea id="batch" rows="20" cols="100">
+[ 
+	{
+	  "method" : "POST",
+	  "to" : "/node",
+	  "id" : 0,
+	  "body" : 
+	  {
+	    "Name" : "Koronare Herzkrankheit",
+	    "ICD10" : "I10"
+	  }
+	}, 
+	{
+	  "method" : "POST",
+	  "to" : "/node",
+	  "id" : 1,
+	  "body" : 
+	  {
+	    "Name" : "ASPIRIN",
+	    "ATC":"XX01AB"
+	  }
+	}, 
+	{
+	  "method" : "POST",
+	  "to" : "{1}/relationships",
+	  "id" : 3,
+	  "body" : 
+	  {
+	    "to" : "{0}",
+	    "data" : { "Rang" : "1.Wahl" },
+	    "type" : "BEHANDELT"
+	  }
+	}, 
+		{
+	  "method" : "POST",
+	  "to" : "/node",
+	  "id" : 10,
+	  "body" : 
+	  {
+	    "Name" : "PLAVIX",
+	    "ATC":"XX01A2"
+	  }
+	}, 
+	{
+	  "method" : "POST",
+	  "to" : "{10}/relationships",
+	  "id" : 11,
+	  "body" : 
+	  {
+	    "to" : "{0}",
+	    "data" : { "Rang" : "2.Wahl" },
+	    "type" : "BEHANDELT"
+	  }
+	},
+	{
+	  "method" : "POST",
+	  "to" : "node/0/relationships",
+	  "id" : 4,
+	  "body" : 
+	  {
+	    "to" : "{0}",
+	    "data" : { "since" : "2010" },
+	   "type" : "DIAGNOSE"
+	  }
+	},
+	 
+	 {
+	  "method" : "POST",
+	  "to" : "/node",
+	  "id" : 5,
+	  "body" : {
+	    "Name" : "Ulcus",
+	    "ICD10" : "U10"
+	  }
+	},
+	{
+	  "method" : "POST",
+	  "to" : "/node",
+	  "id" : 6,
+	  "body" : {
+	    "Name" : "PANTOPRAZOL",
+	    "ATC":"XX01AC"
+	  }
+	}, 
+	{
+	  "method" : "POST",
+	  "to" : "{6}/relationships",
+	  "id" : 7,
+	  "body" : {
+	    "to" : "{5}",
+	    "data" : { "Rang" : "1.Wahl" },
+	    "type" : "BEHANDELT"
+	  }
+	}, 
+	{
+	  "method" : "POST",
+	  "to" : "node/0/relationships",
+	  "id" : 8,
+	  "body" : 
+	  {
+	    "to" : "{5}",
+	    "type" : "DIAGNOSE"
+	  }
+	},
+	{
+	  "method" : "POST",
+	  "to" : "{1}/relationships",
+	  "id" : 9,
+	  "body" : {
+	    "to" : "{5}",
+	    "type" : "KONTRAINDIZIERT BEI"
+	  }
+	}
+]
+		</textarea>
+		<br>
+		<input type="button" onclick="batchSubmit()" value="Submit Batch">
+		<input type="button" onclick="deleteRelations()" value="DeleteRelations">
+		<input type="button" onclick="deleteNodes()" value="DeleteNodes">
+		<br>
+		<textarea id="output" rows="10" cols="100"></textarea>
+	</form>
+</html>

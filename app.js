@@ -2,13 +2,14 @@ var express = require("express");
 
 var app = express();
 
-var server = require('http').createServer(app);
-
 var routes = require("./routes/neo4j.js");
 
-app.get("/", routes.hello );
+app.use( express.bodyParser() );
+app.use( "/", express.static(__dirname + '/public') );
 
-app.get("/node/:id", routes.getNode );
+app.get("/deleteRelations", routes.deleteRelations );
+app.get("/deleteNodes", routes.deleteNodes );
+app.post("/upload", routes.upload );
 
 //CONFIGURATION
 app.configure('development', function() 
@@ -22,4 +23,4 @@ app.configure('production', function()
 });
 
 //PORT
-server.listen( 8080 );
+app.listen( 8080 );
