@@ -1,26 +1,20 @@
-var express = require("express");
 
-var app = express();
+var machine = require("./modules/machine");
 
-var routes = require("./routes/neo4j.js");
+var test = require("./data/columbia.json");
 
-app.use( express.bodyParser() );
-app.use( "/", express.static(__dirname + '/public') );
+//machine.train("./data/columbia.json").save("./data/machine.json");
 
-app.get("/deleteRelations", routes.deleteRelations );
-app.get("/deleteNodes", routes.deleteNodes );
-app.post("/upload", routes.upload );
+//machine.load("./data/machine.json");
 
-//CONFIGURATION
-app.configure('development', function() 
+machine.talking( function( question )
 {
-	console.log("Development");
+  console.log( question );
 });
 
-app.configure('production', function() 
-{	
-	console.log("Produktion");
+machine.exit(function() 
+{
+  console.log('Wanna try again?');
+  process.exit(0);
 });
 
-//PORT
-app.listen( 8080 );
