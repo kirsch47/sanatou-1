@@ -1,0 +1,291 @@
+[ 
+  { 
+    "input":
+    { 
+      "Schmerzen in der Brust":1,
+      "Kurzatmigkeit":1,
+      "Schwindel":1,
+      "Kraftlosigkeit":1,
+      "Hinfallen":1,
+      "Synkope":1,
+      "Schwindelgefühl":1,
+      "Schwitzen":1,
+      "Herzrasen":1,
+      "Übelkeit":1,
+      "Enge in der Brust":1,
+      "Druck auf der Brust":1 
+    }, 
+    "output":{ "Arterielle Hypertonie":1 }
+  }
+  ,
+  { 
+    "input":
+    { 
+      "erhöhte Urinausscheidung":1,
+      "gesteigertes Durstgefühl":1,
+      "Kurzatmigkeit":1, 
+      "Schmerzen in der Brust":1,
+      "Kraftlosigkeit":1,
+      "Übelkeit":1,
+      "Atemnot im Liegen":1,
+      "rasselnder Atem":1,
+      "Schwitzen":1,
+      "Teilnahmslosigkeit":1,
+      "Konfusion":1,
+      "Schwindelgefühl":1,
+      "Erbrechen":1,
+      "Atemnot":1
+    },
+    "output":{ "Diabetes mellitus":1 }
+  }
+  , 
+  { 
+    "input":
+    { 
+      "Selbstmordgefühle":1,
+      "Selbstmordtendenzen":1,
+      "akustische Halluzination":1,
+      "Hoffnungslosigkeit":1,
+      "Weinerlichkeit":1,
+      "Schlaflosigkeit":1,
+      "Antriebsschwäche":1,
+      "Gereiztheit":1,
+      "Erinnerungslücke":1,
+      "Niedergeschlagenheit":1,
+      "optische Halluzinationen":1,
+      "Sorgen":1,
+      "Erregtheit":1,
+      "Zittern":1,
+      "Rauschzustand":1,
+      "Stimmen hören":1,
+      "gesteigerte Energie":1,
+      "Schwierigkeiten Dinge zu erledigen":1,
+      "Alpträume":1,
+      "Konzentrationsmangel":1,
+      "Obdachlosigkeit":1
+    },
+    "output":{ "Depression":1 }
+  },
+  { 
+    "input":
+    { 
+      "Schmerzen in der Brust":1,
+      "Enge in der Brust":1,
+      "Kurzatmigkeit":1,
+      "Bewegungsarmut":1,
+      "Schwitzen":1,
+      "Druck auf der Brust":1,
+      "Atemnot unter Belastung":1,
+      "Atemnot im Liegen":1
+    }, 
+    "output":{ "Koronare Herzkrankheit":1 }
+  },
+  { 
+    "input":
+    { 
+      "Husten":1,
+      "Fieber":1, 
+      "Kurzatmigkeit":1, 
+      "rasselnder Atem":1,
+      "Husten mit Auswurf":1, 
+      "Schmerzen im Rippenfell":1,
+      "gelber Auswurf":1, 
+      "reduzierte Atemgeräusche":1,
+      "Frieren":1, 
+      "Atemnebengeräusche":1,
+      "grüner Auswurf":1,
+      "Husten ohne Auswurf":1, 
+      "Keuchen":1, 
+      "Bluthusten":1, 
+      "Atemschwierigkeiten":1,
+      "gesteigerte Atemfrequenz":1,
+      "Unwohlsein":1, 
+      "Nächtlicher Schweiss":1 
+    },
+    "output":{ "Lungenentzündung":1 }
+  },
+  { 
+    "input":
+    { 
+      "Kurzatmigkeit":1, 
+      "Atemnot im Liegen":1,
+      "erweiterte Halsschlagader":1, 
+      "rasselnder Atem":1, 
+      "Atemnot":1,
+      "Husten":1, 
+      "Keuchen":1
+    }, 
+    "output":{ "Herzinsuffizienz":1 }
+  },
+  { 
+    "input":
+    { 
+      "Artikulationsschwierigkeiten":1,
+      "Kraftlosigkeit":1,
+      "undeutliche Sprache":1,
+      "Gesichtslähmung":1, 
+      "halbseitige Lähmung":1, 
+      "Teilnahmslosigkeit":1,
+      "Krampfanfall":1,
+      "Taubheitsgefühl":1
+    },
+    "output":{ "Schlaganfall":1 } 
+  },
+  { 
+    "input":
+    { 
+      "Keuchen":1, 
+      "Husten":1, 
+      "Kurzatmigkeit":1,
+      "Engegefühl in der Brust":1,
+      "Husten ohne Auswurf":1, 
+      "Schmerzen im Rippenfell":1, 
+      "Husten mit Auswurf":1,
+      "Symptom verstärkende Faktoren":1, 
+      "Atemschwierigkeiten":1
+    }, 
+    "output":{ "Asthma bronchiale":1 }
+  },
+  { 
+    "input":
+    { 
+      "Schmerzen in der Brust":1,
+      "EKG ST Segment Erhöhung":1,
+      "Schwitzen":1, 
+      "Kurzatmigkeit":1, 
+      "EKG ST Segment Verminderung":1,
+      "Bewegungsarmut":1, 
+      "Enge in der Brust":1, 
+      "Druck auf der Brust":1,
+      "EKG T Wellen Umkehrung":1, 
+      "Atemnot im Liegen":1,
+      "rasselnder Atem":1,
+      "Engegefühl in der Brust":1, 
+      "EKG Q Wellen":1, 
+      "Herzrasen":1,
+      "Atemnot":1, 
+      "Schmerzen im Brustkorb":1, 
+      "langsamer Herzschlag":1, 
+      "Synkope":1
+    }, 
+    "output":{ "Myokardinfarkt":1 }
+  },
+  { 
+    "input":
+    { 
+      "Schmerzen":1, 
+      "Schmerzen in der Brust":1,
+      "Schwitzen":1, 
+      "Nichtraucher":1, 
+      "Druck auf der Brust":1,
+      "Synkope":1, 
+      "Gefühllosigkeit":1, 
+      "Schmerzen im Brustkorb":1,
+      "Kurzatmigkeit":1, 
+      "EKG ST Segment Verminderung":1,
+      "Sorgen":1, 
+      "EKG T Wellen Umkehrung":1, 
+      "langsamer Herzschlag":1,
+      "Atemnot":1
+    }, 
+    "output":{ "Hypercholesterinämie":1 }
+  },
+  { 
+    "input":
+    { 
+      "Fieber":1,
+      "Hautrötung":1, 
+      "Vergrösserung der Leber und Milz":1, 
+      "Frieren":1,
+      "Juckreiz":1,
+      "Durchfall":1, 
+      "Bakterieller Abszess":1,
+      "Schwellung":1,
+      "Schmerzen":1, 
+      "Absenz von Fieber":1, 
+      "Husten":1
+    },
+    "output":{ "Infektion":1 }
+  },
+  { 
+    "input":
+    { 
+      "Fieber":1, 
+      "Schmerzen beim Wasserlassen":1, 
+      "Blut im Urin":1,
+      "Nierenschmerzen":1,
+      "Teilnahmslosigkeit":1,
+      "Kraftlosigkeit":1, 
+      "niedrigen Natriumspiegel im Blut":1,
+      "Atemschwierigkeiten":1, 
+      "Schwierigkeiten beim Wasserlassen":1,
+      "Konfusion":1, 
+      "Klares Bewusstsein":1
+    }, 
+    "output":{ "Harnwegsinfekt":1 }
+  },
+  { 
+    "input":
+    { 
+      "Frieren":1, 
+      "Okkultes Blut im Stuhl":1, 
+      "fleckenförmige Blutung der Haut":1, 
+      "Metastasen":1, 
+      "Blutung":1, 
+      "Blässe":1, 
+      "Kraftlosigkeit":1, 
+      "Müdigkeit":1,
+      "Rückenschmerzen":1,
+      "Orthostase":1, 
+      "niedrigen Natriumspiegel im Blut":1,
+      "Schwindel":1, 
+      "Kurzatmigkeit":1,
+      "Schmerzen":1, 
+      "Atemnebengeräusche":1,
+      "Gelenkschmerzen":1,
+      "Schwellung":1,
+      "Transaminitis":1
+    },
+    "output":{ "Anämie":1 }
+  },
+  { 
+    "input":
+    { 
+      "Kurzatmigkeit":1, 
+      "Keuchen":1,
+      "Husten":1, 
+      "Atemnot":1,
+      "Atemschwierigkeiten":1, 
+      "gelb-grünlicher Auswurf":1, 
+      "erniedrigter Sauerstoffgehalt im Blut":1, 
+      "erhöhten Kohlenstoffdioxidgehalt im Blut":1, 
+      "Non-Compliance":1, 
+      "Engegefühl in der Brust":1 
+    }, 
+    "output":{ "Chronisch obstruktive Lungenerkrankung":1 }
+  },
+  { 
+    "input":
+    { 
+      "Fieber":1, 
+      "Hinfallen":1, 
+      "Teilnahmslosigkeit":1, 
+      "Erregtheit":1, 
+      "fleckenförmige Blutung der Haut":1, 
+      "Synkope":1, 
+      "rasselnder Atem":1, 
+      "Fieber":1, 
+      "Husten":1, 
+      "bettlägerig":1, 
+      "Schmerzen":1, 
+      "Gesichtslähmung":1, 
+      "schmerzhafte Bauchdeckenspannung":1,
+      "Atemnebengeräusche":1, 
+      "schwankender Gang":1, 
+      "akustische Halluzination":1
+    }, 
+    "output":{ "Demenz":1 } 
+  }
+]
+
+ 
