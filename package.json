@@ -5,6 +5,7 @@
     "start": "node app"
   },
   "dependencies": {
-    "brain": "~0.6.3"
+    "brain": "~0.6.3",
+    "classifier": "~0.1.0"
   }
 }
